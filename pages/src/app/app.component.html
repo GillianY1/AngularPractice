@@ -14,8 +14,7 @@
         </li>
       </ng-container>
       <li class="page-item"
-        [ngClass]="{disabled: currentPage=== (images.length-1)}"
-      >
+        [ngClass]="{disabled: currentPage=== (images.length-1)}">
         <a class="page-link" (click)='currentPage = currentPage + 1'>Next</a>
       </li>
     </ul>
@@ -23,5 +22,11 @@
 
 <div>
   <h4> {{images[currentPage].title}} </h4>
-  <img [src]="images[currentPage].url" />
+  <!-- <img [src]="images[currentPage].url" /> -->
+  <div class="" [ngSwitch]="currentPage">
+    <div class="" *ngSwitchCase="0"> it's default page one</div>
+    <div class="" *ngSwitchCase="2"> it's page two</div>
+    <div class="" *ngSwitchDefault> it's default one</div>
+  </div>
+
 </div>
