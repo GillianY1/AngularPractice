@@ -8,10 +8,11 @@ export class CustClassDirective {
 
   constructor(private element:ElementRef ) {}
 
-  @Input('appCustClass') set backgroundColor(color:string){
+  /* @Input('appCustClass') set backgroundColor(color:string){
     this.element.nativeElement.style.backgroundColor = color;//this.backgroundColor;//'orange';
   }
-  /*
+  */
+
   @Input('appCustClass') set ClassNames(classObj: any){
     for(let key in classObj){
       if(classObj[key]){
@@ -20,6 +21,6 @@ export class CustClassDirective {
         this.element.nativeElement.classList.remove(key);
       }
     }
-  }*/
+  }
 
 }

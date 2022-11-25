@@ -1,27 +1,27 @@
 <nav>
     <ul class="pagination">
       <li class="page-item"
-          [ngClass]="{disabled: currentPage=== 0}"
+          [appCustClass]="{disabled: currentPage=== 0}"
       >
         <a class="page-link" (click)= "currentPage = currentPage - 1">Prev</a>
       </li>
       <ng-container  *ngFor="let image of images; let i =index;" >
         <li class="page-item"
-        [ngClass]="{ active: i === currentPage }"
+        [appCustClass]="{ active: i === currentPage }"
         *ngIf="checkWindowIndex(i)"
        >
             <a (click)="currentPage = i" class="page-link" >{{i +1}}</a>
         </li>
       </ng-container>
       <li class="page-item"
-        [ngClass]="{disabled: currentPage=== (images.length-1)}">
+        [appCustClass]="{disabled: currentPage=== (images.length-1)}">
         <a class="page-link" (click)='currentPage = currentPage + 1'>Next</a>
       </li>
     </ul>
 </nav>
 
 <div>
-  <h4 [appCustClass]=" 'purple' "> {{images[currentPage].title}} </h4>
+  <h4 > {{images[currentPage].title}} </h4>
   <img [src]="images[currentPage].url" />
   <!--div class="" [ngSwitch]="currentPage">
     <div class="" *ngSwitchCase="0"> it's default page one</div>
