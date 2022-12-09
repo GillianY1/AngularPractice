@@ -2,16 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ElementsRoutingModule } from './elements-routing.module';
-import { EletmentsHomeComponent } from './eletments-home/eletments-home.component';
+import { ElementsHomeComponent } from './elements-home/elements-home.component';
 
 
 @NgModule({
   declarations: [
-    EletmentsHomeComponent
+    ElementsHomeComponent
   ],
   imports: [
     CommonModule,
     ElementsRoutingModule
+  ],
+  exports:[
+    ElementsHomeComponent
   ]
 })
 export class ElementsModule { }
