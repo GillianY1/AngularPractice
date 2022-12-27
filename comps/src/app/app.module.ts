@@ -19,9 +19,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
-        AppRoutingModule,
         ElementsModule,
-        CollectionsModule
+        CollectionsModule,
+        AppRoutingModule
     ]
 })
 export class AppModule { }
