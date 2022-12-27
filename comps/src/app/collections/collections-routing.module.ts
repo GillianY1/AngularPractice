@@ -1,9 +1,9 @@
 import { NgModule, ElementRef, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ColletionsHomeComponent } from './colletions-home/colletions-home.component';
+import { CollectionHomeComponent } from './collection-home/collection-home.component';
 
 const routes: Routes = [
-  {path:'', component: ColletionsHomeComponent}
+  {path:'', component: CollectionHomeComponent}
 ];
 
 @NgModule({
